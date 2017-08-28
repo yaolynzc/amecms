@@ -1,7 +1,7 @@
 
 ## 开发环境
 后端：  
-Node.js V8.2.1  
+Node.js V8.4.0  
 ThinkJS V3.0.0  
 MySQL V5.7.17  
 

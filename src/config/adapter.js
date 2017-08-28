@@ -35,13 +35,13 @@ exports.model = {
   },
   mysql: {
     handle: mysql,
-    database: '',
-    prefix: 'think_',
+    database: 'amecms',
+    prefix: 'ame_',
     encoding: 'utf8',
     host: '127.0.0.1',
     port: '',
     user: 'root',
-    password: 'root',
+    password: 'flame',
     dateStrings: true
   }
 };
@@ -73,7 +73,7 @@ exports.view = {
   type: 'nunjucks',
   common: {
     viewPath: path.join(think.ROOT_PATH, 'view'),
-    sep: '_',
+    sep: '/',
     extname: '.html'
   },
   nunjucks: {

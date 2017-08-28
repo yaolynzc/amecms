@@ -1,6 +1,6 @@
 {
-  "name": "thinkjs-application",
-  "description": "application created by thinkjs",
+  "name": "amecms",
+  "description": "a cms system created by thinkjs",
   "version": "1.0.0",
   "scripts": {
     "start": "node development.js",
@@ -29,7 +29,7 @@
     "eslint": "^4.2.0",
     "eslint-config-think": "^1.0.0"
   },
-  "repository": "",
+  "repository": "https://github.com/yaolynzc/amecms.git",
   "license": "MIT",
   "engines": {
     "node": ">=6.0.0"
