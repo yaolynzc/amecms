@@ -25,7 +25,7 @@ $(document).ready(function () {
           }
           window.location.href = "index.html";
         } else {
-          // layer.msg(json.msg, { icon: 2, time: 1000 });
+          window.location.href = "login.html";
         }
       }
     });
