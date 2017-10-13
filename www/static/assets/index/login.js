@@ -12,7 +12,7 @@ $(document).ready(function () {
     }
 
     $.ajax({
-      url: '/login/login',
+      url: '/user/login',
       data: datas,
       type: 'GET',
       success: function (json) {
@@ -23,9 +23,9 @@ $(document).ready(function () {
           } else {
             $.cookie("cookiePWD", pwd);
           }
-          window.location.href = "index.html";
+          window.location.href = "main.html";
         } else {
-          window.location.href = "login.html";
+          layer.msg('用户名或密码错误！');
         }
       }
     });

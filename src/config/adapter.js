@@ -35,11 +35,11 @@ exports.model = {
   },
   mysql: {
     handle: mysql,
-    database: 'amecms',
-    prefix: 'ame_',
+    database: 'cmsame',
+    prefix: 'cmsame_',
     encoding: 'utf8',
     host: '127.0.0.1',
-    port: '',
+    port: '3306',
     user: 'root',
     password: 'flame',
     dateStrings: true

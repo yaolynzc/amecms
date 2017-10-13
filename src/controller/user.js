@@ -1,10 +1,7 @@
 const Base = require('./base.js');
 
 module.exports = class extends Base {
-  indexAction() {
-    return this.display();
-  }
-
+  // 用户登录
   async loginAction(){
     const uidstr = this.get('uid');
     const pwdstr = this.get('pwd');
@@ -13,6 +10,7 @@ module.exports = class extends Base {
     const userinfo = await this.model('user').findOne(uidstr);
     console.log(userinfo);
     if(userinfo.PWD == think.md5(pwdstr)){
+      await this.session("userInfo", userinfo);
       return this.json({
         status: 1,
         info: '登录成功！'
@@ -25,4 +23,12 @@ module.exports = class extends Base {
     }
   }
 
-};
+  // 用户退出
+  async logoutAction() {
+    await this.session("userInfo", null);
+    return this.json({
+      status: 1,
+      msg: '退出成功！'
+    })
+  }
+}
