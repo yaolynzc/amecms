@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.12, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: cmsame
+-- Host: 127.0.0.1    Database: amecms
 -- ------------------------------------------------------
 -- Server version	5.7.17
 
@@ -16,13 +16,13 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `cmsame_attach`
+-- Table structure for table `amecms_attach`
 --
 
-DROP TABLE IF EXISTS `cmsame_attach`;
+DROP TABLE IF EXISTS `amecms_attach`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `cmsame_attach` (
+CREATE TABLE `amecms_attach` (
   `ID` varchar(50) NOT NULL,
   `NAME` varchar(50) DEFAULT NULL,
   `PATH` varchar(500) DEFAULT NULL,
@@ -36,22 +36,22 @@ CREATE TABLE `cmsame_attach` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `cmsame_attach`
+-- Dumping data for table `amecms_attach`
 --
 
-LOCK TABLES `cmsame_attach` WRITE;
-/*!40000 ALTER TABLE `cmsame_attach` DISABLE KEYS */;
-/*!40000 ALTER TABLE `cmsame_attach` ENABLE KEYS */;
+LOCK TABLES `amecms_attach` WRITE;
+/*!40000 ALTER TABLE `amecms_attach` DISABLE KEYS */;
+/*!40000 ALTER TABLE `amecms_attach` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `cmsame_module`
+-- Table structure for table `amecms_module`
 --
 
-DROP TABLE IF EXISTS `cmsame_module`;
+DROP TABLE IF EXISTS `amecms_module`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `cmsame_module` (
+CREATE TABLE `amecms_module` (
   `ID` varchar(50) NOT NULL,
   `NAME` varchar(50) DEFAULT NULL,
   `URL` varchar(50) DEFAULT NULL,
@@ -66,23 +66,23 @@ CREATE TABLE `cmsame_module` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `cmsame_module`
+-- Dumping data for table `amecms_module`
 --
 
-LOCK TABLES `cmsame_module` WRITE;
-/*!40000 ALTER TABLE `cmsame_module` DISABLE KEYS */;
-INSERT INTO `cmsame_module` VALUES ('99','系统管理',NULL,NULL,'1',1,NULL,'2017-08-08 10:30:08',NULL),('9901','用户管理','/user/index.html',NULL,'2',1,NULL,'2017-08-08 10:30:08',NULL),('9902','角色管理','/role/index.html',NULL,'2',1,NULL,'2017-08-08 10:30:08',NULL),('9903','功能管理','/module/index.html',NULL,'2',1,NULL,'2017-08-08 10:30:08',NULL);
-/*!40000 ALTER TABLE `cmsame_module` ENABLE KEYS */;
+LOCK TABLES `amecms_module` WRITE;
+/*!40000 ALTER TABLE `amecms_module` DISABLE KEYS */;
+INSERT INTO `amecms_module` VALUES ('99','系统管理',NULL,NULL,'1',1,NULL,'2017-08-08 10:30:08',NULL),('9901','用户管理','/user/index.html',NULL,'2',1,NULL,'2017-08-08 10:30:08',NULL),('9902','角色管理','/role/index.html',NULL,'2',1,NULL,'2017-08-08 10:30:08',NULL),('9903','功能管理','/module/index.html',NULL,'2',1,NULL,'2017-08-08 10:30:08',NULL);
+/*!40000 ALTER TABLE `amecms_module` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `cmsame_relate`
+-- Table structure for table `amecms_relate`
 --
 
-DROP TABLE IF EXISTS `cmsame_relate`;
+DROP TABLE IF EXISTS `amecms_relate`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `cmsame_relate` (
+CREATE TABLE `amecms_relate` (
   `ID` varchar(50) NOT NULL,
   `GLID` varchar(50) DEFAULT NULL,
   `ATID` varchar(50) DEFAULT NULL,
@@ -94,22 +94,22 @@ CREATE TABLE `cmsame_relate` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `cmsame_relate`
+-- Dumping data for table `amecms_relate`
 --
 
-LOCK TABLES `cmsame_relate` WRITE;
-/*!40000 ALTER TABLE `cmsame_relate` DISABLE KEYS */;
-/*!40000 ALTER TABLE `cmsame_relate` ENABLE KEYS */;
+LOCK TABLES `amecms_relate` WRITE;
+/*!40000 ALTER TABLE `amecms_relate` DISABLE KEYS */;
+/*!40000 ALTER TABLE `amecms_relate` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `cmsame_right`
+-- Table structure for table `amecms_right`
 --
 
-DROP TABLE IF EXISTS `cmsame_right`;
+DROP TABLE IF EXISTS `amecms_right`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `cmsame_right` (
+CREATE TABLE `amecms_right` (
   `ID` varchar(50) NOT NULL,
   `RID` varchar(50) DEFAULT NULL,
   `MID` varchar(50) DEFAULT NULL,
@@ -121,23 +121,23 @@ CREATE TABLE `cmsame_right` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `cmsame_right`
+-- Dumping data for table `amecms_right`
 --
 
-LOCK TABLES `cmsame_right` WRITE;
-/*!40000 ALTER TABLE `cmsame_right` DISABLE KEYS */;
-INSERT INTO `cmsame_right` VALUES ('08c932ad-7be2-11e7-8f8b-a0c589307630','63e8aae8-7be1-11e7-8f8b-a0c589307630','99',NULL,'2017-08-08 10:30:08',NULL),('115b1658-7be2-11e7-8f8b-a0c589307630','63e8aae8-7be1-11e7-8f8b-a0c589307630','9901',NULL,'2017-08-08 10:30:08',NULL),('1b317730-7be2-11e7-8f8b-a0c589307630','63e8aae8-7be1-11e7-8f8b-a0c589307630','9902',NULL,'2017-08-08 10:30:08',NULL),('25e4ad5a-7be2-11e7-8f8b-a0c589307630','63e8aae8-7be1-11e7-8f8b-a0c589307630','9903',NULL,'2017-08-08 10:30:08',NULL);
-/*!40000 ALTER TABLE `cmsame_right` ENABLE KEYS */;
+LOCK TABLES `amecms_right` WRITE;
+/*!40000 ALTER TABLE `amecms_right` DISABLE KEYS */;
+INSERT INTO `amecms_right` VALUES ('08c932ad-7be2-11e7-8f8b-a0c589307630','63e8aae8-7be1-11e7-8f8b-a0c589307630','99',NULL,'2017-08-08 10:30:08',NULL),('115b1658-7be2-11e7-8f8b-a0c589307630','63e8aae8-7be1-11e7-8f8b-a0c589307630','9901',NULL,'2017-08-08 10:30:08',NULL),('1b317730-7be2-11e7-8f8b-a0c589307630','63e8aae8-7be1-11e7-8f8b-a0c589307630','9902',NULL,'2017-08-08 10:30:08',NULL),('25e4ad5a-7be2-11e7-8f8b-a0c589307630','63e8aae8-7be1-11e7-8f8b-a0c589307630','9903',NULL,'2017-08-08 10:30:08',NULL);
+/*!40000 ALTER TABLE `amecms_right` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `cmsame_role`
+-- Table structure for table `amecms_role`
 --
 
-DROP TABLE IF EXISTS `cmsame_role`;
+DROP TABLE IF EXISTS `amecms_role`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `cmsame_role` (
+CREATE TABLE `amecms_role` (
   `ID` varchar(50) NOT NULL,
   `NAME` varchar(50) DEFAULT NULL,
   `STATE` int(11) DEFAULT NULL,
@@ -149,23 +149,23 @@ CREATE TABLE `cmsame_role` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `cmsame_role`
+-- Dumping data for table `amecms_role`
 --
 
-LOCK TABLES `cmsame_role` WRITE;
-/*!40000 ALTER TABLE `cmsame_role` DISABLE KEYS */;
-INSERT INTO `cmsame_role` VALUES ('63e8aae8-7be1-11e7-8f8b-a0c589307630','系统管理员',1,'后台管理员','2017-08-08 10:30:08',NULL);
-/*!40000 ALTER TABLE `cmsame_role` ENABLE KEYS */;
+LOCK TABLES `amecms_role` WRITE;
+/*!40000 ALTER TABLE `amecms_role` DISABLE KEYS */;
+INSERT INTO `amecms_role` VALUES ('63e8aae8-7be1-11e7-8f8b-a0c589307630','系统管理员',1,'后台管理员','2017-08-08 10:30:08',NULL);
+/*!40000 ALTER TABLE `amecms_role` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `cmsame_user`
+-- Table structure for table `amecms_user`
 --
 
-DROP TABLE IF EXISTS `cmsame_user`;
+DROP TABLE IF EXISTS `amecms_user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `cmsame_user` (
+CREATE TABLE `amecms_user` (
   `ID` varchar(50) NOT NULL,
   `NAME` varchar(50) DEFAULT NULL,
   `PWD` varchar(50) DEFAULT NULL,
@@ -183,21 +183,21 @@ CREATE TABLE `cmsame_user` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `cmsame_user`
+-- Dumping data for table `amecms_user`
 --
 
-LOCK TABLES `cmsame_user` WRITE;
-/*!40000 ALTER TABLE `cmsame_user` DISABLE KEYS */;
-INSERT INTO `cmsame_user` VALUES ('admin','系统管理员','21232f297a57a5a743894a0e4a801fc3','63e8aae8-7be1-11e7-8f8b-a0c589307630',1,NULL,NULL,NULL,1,NULL,'2017-08-03 18:08:08',NULL);
-/*!40000 ALTER TABLE `cmsame_user` ENABLE KEYS */;
+LOCK TABLES `amecms_user` WRITE;
+/*!40000 ALTER TABLE `amecms_user` DISABLE KEYS */;
+INSERT INTO `amecms_user` VALUES ('admin','系统管理员','21232f297a57a5a743894a0e4a801fc3','63e8aae8-7be1-11e7-8f8b-a0c589307630',1,NULL,NULL,NULL,1,NULL,'2017-08-03 18:08:08',NULL);
+/*!40000 ALTER TABLE `amecms_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Dumping events for database 'cmsame'
+-- Dumping events for database 'amecms'
 --
 
 --
--- Dumping routines for database 'cmsame'
+-- Dumping routines for database 'amecms'
 --
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -209,4 +209,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-13 11:04:45
+-- Dump completed on 2017-10-13 16:07:10

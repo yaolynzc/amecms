@@ -35,8 +35,8 @@ exports.model = {
   },
   mysql: {
     handle: mysql,
-    database: 'cmsame',
-    prefix: 'cmsame_',
+    database: 'amecms',
+    prefix: 'amecms_',
     encoding: 'utf8',
     host: '127.0.0.1',
     port: '3306',
