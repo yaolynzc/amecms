@@ -23,29 +23,29 @@
 
 <div class="container">
 
-    <form class="form-signin" action="index.html">
+    <form class="form-signin">
         <div class="form-signin-heading text-center">
-            <h1 class="sign-title">Sign In</h1>
-            <img src="images/login-logo.png" alt=""/>
+            <h1 class="sign-title">登录</h1>
+            <!-- <img src="images/login-logo.png" alt=""/> -->
         </div>
         <div class="login-wrap">
-            <input type="text" class="form-control" placeholder="User ID" autofocus>
-            <input type="password" class="form-control" placeholder="Password">
+            <input type="text" class="form-control" placeholder="用户名" id="uid" autofocus>
+            <input type="password" class="form-control" placeholder="密码" id="pwd">
 
-            <button class="btn btn-lg btn-login btn-block" type="submit">
+            <button class="btn btn-lg btn-login btn-block" type="button" id="btnLogin">
                 <i class="fa fa-check"></i>
             </button>
 
             <div class="registration">
-                Not a member yet?
+                不是会员？
                 <a class="" href="registration.html">
-                    Signup
+                    注册
                 </a>
             </div>
             <label class="checkbox">
-                <input type="checkbox" value="remember-me"> Remember me
+                <input type="checkbox" id="rememberme"> 记住我
                 <span class="pull-right">
-                    <a data-toggle="modal" href="#myModal"> Forgot Password?</a>
+                    <a data-toggle="modal" href="#myModal"> 忘记密码？</a>
 
                 </span>
             </label>
@@ -58,16 +58,16 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title">Forgot Password ?</h4>
+                        <h4 class="modal-title">忘记密码？</h4>
                     </div>
                     <div class="modal-body">
-                        <p>Enter your e-mail address below to reset your password.</p>
-                        <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+                        <p>输入您的邮箱地址进行密码重置。</p>
+                        <input type="text" id="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
 
                     </div>
                     <div class="modal-footer">
-                        <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
-                        <button class="btn btn-primary" type="button">Submit</button>
+                        <button data-dismiss="modal" class="btn btn-default" type="button">取消</button>
+                        <button class="btn btn-primary" type="button">确定</button>
                     </div>
                 </div>
             </div>
@@ -86,6 +86,7 @@
 <script src="js/jquery-1.10.2.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/modernizr.min.js"></script>
-
+<script src="js/jquery.cookies.js"></script>
+<script src="assets/login/login.js"></script>
 </body>
 </html>
