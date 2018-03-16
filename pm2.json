@@ -2,7 +2,7 @@
   "apps": [{
     "name": "amecms",
     "script": "production.js",
-    "cwd": "/data/amecms",
+    "cwd": "D:\dev\mean\github\amecms",
     "exec_mode": "fork",
     "max_memory_restart": "1G",
     "autorestart": true,
