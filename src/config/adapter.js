@@ -37,9 +37,9 @@ exports.model = {
   mysql: {
     handle: mysql,
     database: 'amecms',
-    prefix: 'amecms_',
+    prefix: 'ame_',
     encoding: 'utf8',
-    host: '127.0.0.1',
+    host: '211.159.218.41',
     port: '3306',
     user: 'root',
     password: 'flame',

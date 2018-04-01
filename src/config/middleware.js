@@ -14,7 +14,7 @@ module.exports = [
     enable: isDev,
     options: {
       root: path.join(think.ROOT_PATH, 'www/static'),
-      publicPath: /^\/(css|fonts|images|js|assets|favicon\.ico)/
+      publicPath: /^\/(css|fonts|images|img|assets|js|favicon\.ico)/
     }
   },
   {

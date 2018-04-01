@@ -9,7 +9,7 @@ module.exports = class extends Base {
 
     const userinfo = await this.model('user').findOne(uidstr);
     console.log(userinfo);
-    if(userinfo.PWD == think.md5(pwdstr)){
+    if(userinfo.pwd == think.md5(pwdstr)){
       await this.session("userInfo", userinfo);
       return this.json({
         status: 1,
