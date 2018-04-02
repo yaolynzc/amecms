@@ -1,6 +1,10 @@
 const Base = require('./base.js');
 
 module.exports = class extends Base {
+  // user/index.html页面
+  indexAction(){
+    return this.display();
+  }
   // 用户登录
   async loginAction(){
     const uidstr = this.get('uid');
@@ -19,8 +23,18 @@ module.exports = class extends Base {
       return this.json({
         status: 0,
         info: '登录失败！'
-      })
+      });
     }
+  }
+
+  // 获取用户菜单
+  async getmenuAction() {
+    const userinfo = await this.session("userInfo");
+    const userResList = await this.model('user').getMenu(userinfo.id);
+    return this.json({
+      status: 1,
+      dt: userResList
+    });
   }
 
   // 用户退出
@@ -29,6 +43,6 @@ module.exports = class extends Base {
     return this.json({
       status: 1,
       msg: '退出成功！'
-    })
+    });
   }
 }
