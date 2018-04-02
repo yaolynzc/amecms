@@ -22,7 +22,7 @@ var Ame = function () {
                     var html = [];
                     for(var i in data) {
                         // 一级菜单
-                        if (data[i].type === 0 ) {
+                        if (data[i].type === 0 && !data[i].url) {
                             //递归加载子节点
                             html.push(showLeftMenuSon(data[i], data));
                         }
@@ -30,7 +30,7 @@ var Ame = function () {
                     $('#leftSideMenu').html(html.join(''));
 
                     var nowurl = $('li a[href="' + window.location.pathname + '"]', $('#leftSideMenu'));
-                    if(nowurl.length>0){
+                    if(nowurl.length > 0) {
                         //激活当前
                         nowurl.parent().addClass('active');
                         //所有父ul.treeview-menu显示
